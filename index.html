@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Celebration of Life - Felix Ntrakwah</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+</head>
+
+<body>
+    <div class="preloader">
+        <img src="assets/img/index/pre.svg" alt="Preloader Image">
+    </div>
+
+    <div class="main-content" style="display: none;">
+
+    <header>
+        <div class="logo">
+            <img src="assets/img/index/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <div class="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="funeral.html">Funeral</a></li>
+                    <li><a href="tributes.html">Tributes</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-image">
+            <img src="assets/img/index/hero.jpg" alt="Hero Image">
+        </section>
+        <section class="tribute-info">
+            <h1>Mr. Felix Ntrakwah</h1>
+            <p>1949 - 2024</p>
+        </section>
+
+        <section class="articles">
+            <article>
+                <figure>
+                    <img src="assets/img/index/photos.jpg" alt="Photos">
+                </figure>
+                <div class="article-preview">
+                    <h2>Photos</h2>
+                    <p>Explore cherished moments captured through the lens.</p>
+                </div>
+            </article>
+            <article>
+                <figure>
+                    <img src="assets/img/index/funeral.jpg" alt="Funeral">
+                </figure>
+                <div class="article-preview">
+                    <h2>Tributes</h2>
+                    <p>Click to read or write heartfelt messages honoring a remarkable life.</p>
+                </div>
+            </article>
+            <article>
+                <figure>
+                    <img src="assets/img/index/tributes.jpg" alt="Tributes">
+                </figure>
+                <div class="article-preview">
+                    <h2>Funeral Arrangements</h2>
+                    <p>Click to see how the funeral arrangement follows</p>
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Celebration of Life - Felix Ntrakwah</p>
+    </footer>
+
+    </div>
+    <script src="assets/js/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Wait for 4 seconds and then fade out the preloader
+            setTimeout(function () {
+                var preloader = document.querySelector('.preloader');
+                var mainContent = document.querySelector('.main-content');
+
+                // Fade out the preloader
+                preloader.style.opacity = 0;
+
+                // Set a timeout to hide the preloader after the fade out animation completes
+                setTimeout(function () {
+                    preloader.style.display = 'none'; // Hide the preloader completely
+                    // Show the main content
+                    mainContent.style.display = 'block';
+                }, 2000); // 2000ms = 2s (duration of the fade out animation)
+            }, 4000); // 4000ms = 4s (time before fading out)
+        });
+    </script>
+</body>
+
+</html>

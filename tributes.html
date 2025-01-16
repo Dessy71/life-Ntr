@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tributes - Felix Ntrakwah</title>
+    <link rel="stylesheet" href="assets/css/tributes.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/img/index/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <div class="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="funeral.html">Funeral</a></li>
+                    <li><a href="tributes.html" class="active">Tributes</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tribute-section">
+            <h1>Tributes to Mr. Felix Ntrakwah</h1>
+
+            <!-- Tributes Display Container -->
+            <div class="tributes-container" id="tributes-container">
+                <!-- Tributes will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Floating Tab for Writing a Tribute -->
+        <div class="floating-tab" id="floating-tab">
+            <i class="fas fa-comment-alt"></i>
+        </div>
+
+        <!-- Tribute Form Modal -->
+        <div class="tribute-form-modal" style="display: none;">
+            <form class="tribute-form">
+                <h2>Write a Tribute</h2>
+
+                <!-- Name Input -->
+                <input type="text" id="name" placeholder="Your Name" required>
+
+                <!-- Relationship Dropdown -->
+                <select id="relationship" required>
+                    <option value="" disabled selected>Select your relationship</option>
+                    <option value="family">Family</option>
+                    <option value="friend">Friend</option>
+                    <option value="acquaintance">Acquaintance/Colleague</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <!-- Tribute Textarea -->
+                <textarea id="tribute-message" rows="5" placeholder="Your Tribute" required></textarea>
+
+                <!-- Buttons for Form -->
+                <button type="button" id="submit-tribute">Submit Tribute</button>
+                <button type="button" id="close-modal">Close</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Celebration of Life - Felix Ntrakwah</p>
+    </footer>
+
+    <!-- JavaScript Includes -->
+    <script src="assets/js/tributes.js"></script>
+    <script src="assets/js/index.js"></script>
+
+</body>
+
+</html>

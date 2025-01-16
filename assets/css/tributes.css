@@ -1,0 +1,328 @@
+/* Main tribute section */
+.tribute-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.tribute-section h1 {
+    font-size: 2.5rem;
+    color: #2E8BC0;
+    margin-bottom: 20px;
+}
+
+/* Container for tributes */
+.tributes-container {
+    column-count: 3; /* Number of columns */
+    column-gap: 20px; /* Gap between columns */
+    padding: 20px;
+}
+
+/* Individual tribute card */
+.tribute-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #D8EAE3;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure full width within grid */
+    max-width: 350px; /* Fixed width for all cards */
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px; /* Space between cards */
+    height: auto; /* Ensure height adjusts based on content */
+    break-inside: avoid; /* Prevents cards from breaking in the middle */
+}
+
+/* Card header containing profile picture and name/relationship */
+.card-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0078D7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.card-header .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.details .name {
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+.details .relationship {
+    font-size: 14px;
+    color: red;
+}
+
+/* Card body containing tribute message */
+.card-body {
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: pre-wrap; /* Allows for paragraph breaks */
+    margin-bottom: 10px;
+}
+
+/* Card footer containing timestamp and hashtag */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 12px;
+    color: #666;
+}
+
+.card-footer .hashtag {
+    color: #0078D7;
+    font-weight: bold;
+}
+
+.card-footer .timestamp {
+    font-style: italic;
+    color: #666;
+}
+
+/* Floating tab for tribute form */
+.floating-tab {
+    position: fixed;
+    bottom: 50%;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #2E8BC0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.floating-tab:hover {
+    transform: scale(1.1);
+}
+
+.floating-tab img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Modal styling */
+.tribute-form-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.tribute-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tribute-form h2 {
+    font-size: 1.5rem;
+    color: #2E8BC0;
+    margin-bottom: 15px;
+}
+
+.tribute-form input,
+.tribute-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.tribute-form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.tribute-form button#submit-tribute {
+    background-color: #2E8BC0;
+    color: white;
+}
+
+.tribute-form button#submit-tribute:hover {
+    background-color: #1A5A80;
+}
+
+.tribute-form button#close-modal {
+    background-color: #ccc;
+    color: #333;
+}
+
+.tribute-form button#close-modal:hover {
+    background-color: #999;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+    .tributes-container {
+        column-count: 2; /* Two columns on medium screens */
+    }
+
+    .tribute-card {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .profile-photo {
+        width: 45px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .card-header .details .name {
+        font-size: 16px;
+    }
+
+    .card-header .details .relationship {
+        font-size: 12px;
+    }
+
+    .card-body {
+        font-size: 13px;
+    }
+
+    .card-footer {
+        font-size: 10px;
+    }
+
+    .floating-tab {
+        width: 50px;
+        height: 50px;
+    }
+
+    .floating-tab img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tributes-container {
+        column-count: 1; /* One column on smaller screens */
+    }
+
+    .tribute-card {
+        max-width: 100%;
+    }
+
+    .profile-photo {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .card-header .details .name {
+        font-size: 14px;
+    }
+
+    .card-header .details .relationship {
+        font-size: 12px;
+    }
+
+    .card-body {
+        font-size: 12px;
+    }
+
+    .card-footer {
+        font-size: 10px;
+    }
+
+    .floating-tab {
+        width: 45px;
+        height: 45px;
+    }
+
+    .floating-tab img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tribute-form {
+        width: 85%;
+    }
+
+    .tribute-form h2 {
+        font-size: 1.2rem;
+    }
+
+    .tribute-form button {
+        font-size: 14px;
+    }
+
+    .tribute-card {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .profile-photo {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .card-header .details .name {
+        font-size: 12px;
+    }
+
+    .card-header .details .relationship {
+        font-size: 10px;
+    }
+
+    .card-body {
+        font-size: 11px;
+    }
+
+    .card-footer {
+        font-size: 9px;
+    }
+}
