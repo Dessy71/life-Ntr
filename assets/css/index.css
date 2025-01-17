@@ -237,26 +237,39 @@ footer {
 
 /* For smaller screens (below 768px), show the hamburger menu and hide the nav links */
 @media (max-width: 768px) {
-    /* Show the hamburger menu */
+    /* Position the hamburger menu to the right */
     .hamburger-menu {
         display: flex;
+        cursor: pointer;
+        position: absolute;
+        top: 20px; /* Adjust based on your header height */
+        right: 40px;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 25px;
+        width: 30px;
+        margin-right: 30px;
     }
-
-    /* Hide the nav links initially on small screens */
+    /* Initially hide the nav links */
     .nav-links {
-        display: none;
+        display: none; /* Hide the nav links by default */
+        list-style: none;
+        padding: 0;
     }
 
     /* When the hamburger menu is active, show the nav links */
     .nav-links.active {
         display: flex;
-        flex-direction: column; /* Stacks the nav items vertically */
+        flex-direction: column; /* Stack the nav items vertically */
+        align-items: center;
+        justify-content: center;
+        text-align: center; /* Center align the items */
         gap: 10px;
         margin-right: 4px;
         background-color: #333;
         padding: 10px;
         position: absolute;
-        top: 60px; /* Adjust based on header height */
+        top: 0; /* Adjust based on header height */
         right: 0;
         width: 100%;
     }
@@ -267,8 +280,31 @@ footer {
         padding: 0;
     }
 
+    .nav-links.active ul {
+        display: flex;
+        flex-direction: column; /* Stack the nav items vertically */
+        gap: 10px;
+        margin-right: 4px;
+        background-color: #333;
+        padding: 10px;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-links.active ul li {
+        display: block; /* Ensure each item takes up a full line */
+    }
+
+    .nav-links.active ul li a {
+        display: block;
+        /* Ensure each item takes up a full line */
+    }
+
     .nav-links ul li {
         margin: 0;
+        display: block; /* Ensure the list items are in a column layout */
     }
 
     .nav-links ul li a {
@@ -296,6 +332,7 @@ footer {
         transform: rotate(-45deg) translateY(-7px);
     }
 }
+
 
 /* Preloader Styles */
 .preloader {
