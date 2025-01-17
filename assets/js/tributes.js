@@ -4,7 +4,7 @@ window.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
         header.style.backgroundColor = '#333'; // Solid color
     } else {
-        header.style.backgroundColor = 'transparent'; // Transparent background
+        header.style.backgroundColor = '#333'; // Transparent background
     }
 });
 

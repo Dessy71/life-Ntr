@@ -82,7 +82,6 @@ nav ul li a:active {
 }
 /* Hover State */
 nav ul li a:hover {
-    
     color: #2E8BC0;
     text-decoration: underline;
 }
@@ -99,7 +98,6 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-radius: 50px;
     transition: transform 0.8s ease-out;
 }
 
@@ -124,10 +122,26 @@ nav ul li a:hover {
 
 .tribute-info h1 {
     margin: 0;
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 7rem; /* Increase the font size */
+    font-family: "Fleur De Leah", serif;
+    font-weight: 400;
+    font-style: normal;
     opacity: 1;
     transition: opacity 1s ease-out;
+}
+
+/* Responsive design for medium screens */
+@media (max-width: 768px) {
+    .tribute-info h1 {
+        font-size: 4rem; /* Adjust for medium-sized screens */
+    }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
+    .tribute-info h1 {
+        font-size: 3rem; /* Adjust for smaller screens */
+    }
 }
 
 .tribute-info p {
@@ -337,7 +351,6 @@ footer {
     }
 }
 
-
 /* Preloader Styles */
 .preloader {
     position: fixed;
@@ -357,6 +370,46 @@ footer {
 /* Preloader image styles */
 .preloader img {
     max-width: 100%;
-    height: auto;  /* Ensures the image is proportional */
-    margin-bottom: 0; /* Optional: adds some margin to the bottom */
+    height: auto; /* 85% of the viewport height */
+    margin-bottom: 0; /* No margin at the bottom */
+    object-fit: contain; /* Ensures image keeps its aspect ratio */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .moving-text {
+        font-size: 16px;
+    }
+
+    .moving-text-container {
+        padding: 8px 0;
+    }
+
+    .hero-overlay h1 {
+        font-size: 1.8rem; /* Adjusted for medium screens */
+    }
+
+    .preloader img {
+        height: auto;
+        margin-bottom: 0 !important; /* Ensure it occupies 85% of viewport height on medium screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .moving-text {
+        font-size: 14px;
+    }
+
+    .moving-text-container {
+        padding: 5px 0;
+    }
+
+    .hero-overlay h1 {
+        font-size: 1.5rem; /* Adjusted for small screens */
+    }
+
+    .preloader img {
+        height: auto; 
+        margin-bottom: 0 !important; /* Ensure it occupies 85% of viewport height on small screens */
+    }
 }

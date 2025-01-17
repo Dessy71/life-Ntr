@@ -21,8 +21,11 @@
 <body>
     <header>
         <div class="logo">
-            <img src="assets/img/index/logo.png" alt="Logo">
+            <a href="index.html">
+                <img src="assets/img/index/logo.svg" alt="Logo">
+            </a>
         </div>
+        
         <nav>
             <div class="hamburger-menu">
                 <span class="bar"></span>
@@ -31,18 +34,27 @@
             </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="photos.html">Photos</a></li>
-                    <li><a href="funeral.html">Funeral</a></li>
-                    <li><a href="tributes.html" class="active">Tributes</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="photos.html" class="active">Photos</a></li>
+                    <li><a href="tributes.html" class="active">Tributes</a></li>                
+                    <li><a href="funeral.html" class="active">Funeral</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
+        <section class="hero">
+            <div class="hero-banner" style="background-image: url('assets/img/photos/hero.jpg');"></div>
+            <div class="hero-overlay-bg"></div>
+            <div class="hero-overlay">
+                <h1>Tributes to mr Ntrakwah</h1>
+            </div>
+        </section>
         <section class="tribute-section">
-            <h1>Tributes to Mr. Felix Ntrakwah</h1>
+
+            <div class="moving-text">Click on the floating icon to add your tribute!</div>
+          
 
             <!-- Tributes Display Container -->
             <div class="tributes-container" id="tributes-container">

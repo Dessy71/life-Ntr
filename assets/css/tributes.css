@@ -397,20 +397,90 @@
 /* Medium Screens (max-width: 768px) */
 @media (max-width: 768px) {
     .hero-overlay h1 {
-        font-size: 2.5rem;
+        font-size: 1.2rem;
     }
 
     .hero-overlay{
         padding: 1px 50px;
+        opacity: 1; /* Ensure overlay is visible */
+        transform: translate(-50%, -50%) scale(1); 
     }
+    .hero-overlay-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+        opacity: 5;
+        transition: opacity 0.3s ease-in-out;
+    }   
 }
 
 /* Small Screens (max-width: 480px) */
 @media (max-width: 480px) {
     .hero-overlay h1 {
-        font-size: 2rem;
+        font-size: 1rem;
     }
     .hero-overlay{
         padding: 1px 25px;
+        opacity: 1; /* Ensure overlay is visible */
+        transform: translate(-50%, -50%) scale(1); 
+    }
+    .hero-overlay-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+        opacity: 5;
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+/* Moving text container */
+.moving-text-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+   
+    padding: 10px 0;
+}
+
+.moving-text {
+    display: inline-block;
+    animation: scrollText 30s linear infinite;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .moving-text {
+        font-size: 16px;
+    }
+
+    .moving-text-container {
+        padding: 8px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .moving-text {
+        font-size: 14px;
+    }
+
+    .moving-text-container {
+        padding: 5px 0;
     }
 }
