@@ -46,6 +46,57 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Lightbox Overlay */
+.lightbox {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 70%;
+    max-height: 70%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.2);
+}
+
 /* Responsive design using media queries */
 
 /* Medium screens (max-width: 768px) */
@@ -53,12 +104,22 @@ body {
     .grid {
         grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
     }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+    }
 }
 
 /* Small screens (max-width: 480px) */
 @media (max-width: 480px) {
     .grid {
         grid-template-columns: repeat(1, 1fr); /* Single column for very small screens */
+    }
+
+    .lightbox img {
+        max-width: 95%;
+        max-height: 95%;
     }
 }
 
@@ -116,7 +177,6 @@ body {
     text-align: center;
     padding: 1px 250px;
     border: 1.5px solid white;
-    
     border-radius: 10px;
     transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
@@ -134,24 +194,16 @@ body {
         font-size: 2.5rem;
     }
 
-    .hero-overlay{
+    .hero-overlay {
         padding: 1px 50px;
         opacity: 1; /* Ensure overlay is visible */
         transform: translate(-50%, -50%) scale(1); 
     }
     .photo-gallery {
         padding: 70px;
-     
     }
     .hero-overlay-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
         opacity: 5;
-        transition: opacity 0.3s ease-in-out;
     }
 }
 
@@ -160,23 +212,15 @@ body {
     .hero-overlay h1 {
         font-size: 2rem;
     }
-    .hero-overlay{
+    .hero-overlay {
         padding: 1px 25px;
         opacity: 1; /* Ensure overlay is visible */
         transform: translate(-50%, -50%) scale(1); 
     }
     .photo-gallery {
         padding: 50px;
-     
     }
     .hero-overlay-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
         opacity: 5;
-        transition: opacity 0.3s ease-in-out;
     } 
 }
