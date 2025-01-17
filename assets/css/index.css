@@ -76,6 +76,10 @@ nav ul li a:active {
     color: #2E8BC0;
 }
 
+.nav-links ul li a.active {
+    color: #20B2AA; /* Sea blue color for active link */
+    font-weight: bold;
+}
 /* Hover State */
 nav ul li a:hover {
     
@@ -297,7 +301,7 @@ footer {
         display: block; /* Ensure each item takes up a full line */
     }
 
-    .nav-links.active ul li a {
+    .nav-links ul li a.active {
         display: block;
         /* Ensure each item takes up a full line */
     }
