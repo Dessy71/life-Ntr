@@ -17,11 +17,8 @@
 </head>
 
 <body>
-    <div class="preloader">
-        <img src="assets/img/index/pre.svg" alt="Preloader Image">
-    </div>
 
-    <div class="main-content" style="display: none;">
+
 
     <header>
         <div class="logo">
@@ -98,25 +95,7 @@
 
     </div>
     <script src="assets/js/index.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Wait for 4 seconds and then fade out the preloader
-            setTimeout(function () {
-                var preloader = document.querySelector('.preloader');
-                var mainContent = document.querySelector('.main-content');
-
-                // Fade out the preloader
-                preloader.style.opacity = 0;
-
-                // Set a timeout to hide the preloader after the fade out animation completes
-                setTimeout(function () {
-                    preloader.style.display = 'none'; // Hide the preloader completely
-                    // Show the main content
-                    mainContent.style.display = 'block';
-                }, 2000); // 2000ms = 2s (duration of the fade out animation)
-            }, 4000); // 4000ms = 4s (time before fading out)
-        });
-    </script>
+    
 </body>
 
 </html>
