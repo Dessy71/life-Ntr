@@ -503,7 +503,7 @@ nav ul li a:hover {
     padding: 50px;
   }
   .hero-overlay-bg {
-    opacity: 2;
+    opacity: 1;
   }
 }
 

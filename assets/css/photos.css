@@ -271,7 +271,7 @@ header {
       padding: 70px;
     }
     .hero-overlay-bg {
-      opacity: 2.5;
+      opacity: 1;
     }
   }
   
@@ -289,7 +289,7 @@ header {
       padding: 50px;
     }
     .hero-overlay-bg {
-      opacity: 5;
+      opacity: 1;
     }
   }
   

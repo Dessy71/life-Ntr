@@ -152,7 +152,7 @@ nav ul li a:hover {
     padding: 70px;
   }
   .hero-overlay-bg {
-    opacity: 2.0;
+    opacity: 1.0;
   }
 }
 
@@ -170,7 +170,7 @@ nav ul li a:hover {
     padding: 50px;
   }
   .hero-overlay-bg {
-    opacity: 2;
+    opacity: 1;
   }
 }
 
