@@ -1,21 +1,4 @@
 // Wait for the document to fully load
-document.addEventListener('DOMContentLoaded', function () {
-    // Preloader
-    setTimeout(function () {
-        const preloader = document.querySelector('.preloader');
-        const mainContent = document.querySelector('.main-content');
-
-        // Fade out the preloader
-        preloader.style.opacity = 0;
-
-        // Hide the preloader after fade out animation
-        setTimeout(function () {
-            preloader.style.display = 'none';
-            // Show the main content
-            mainContent.style.display = 'block';
-        }, 1000); // 1s fade-out duration
-    }, 4000); // 4s delay before fading out
-
     // Hamburger Menu (Mobile view)
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const navLinksMobile = document.querySelector('.nav-links');
@@ -71,4 +54,3 @@ document.addEventListener('DOMContentLoaded', function () {
             header.style.backgroundColor = 'transparent'; // Transparent background
         }
     });
-});

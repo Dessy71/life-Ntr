@@ -4,9 +4,10 @@ window.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
         header.style.backgroundColor = '#333'; // Solid color
     } else {
-        header.style.backgroundColor ="#333" // Transparent background
+        header.style.backgroundColor = "transparent"; // Transparent background
     }
 });
+
 
  // Hamburger Menu (Mobile view)
  const hamburgerMenu = document.querySelector('.hamburger-menu');

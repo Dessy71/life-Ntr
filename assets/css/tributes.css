@@ -1,488 +1,679 @@
 /* Main tribute section */
 .tribute-section {
-    padding: 20px;
-    text-align: center;
-    background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
 }
 
 .tribute-section h1 {
-    font-size: 2.5rem;
-    color: #2E8BC0;
-    margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #2E8BC0;
+  margin-bottom: 20px;
 }
 
 /* Container for tributes */
 .tributes-container {
-    column-count: 3; /* Number of columns */
-    column-gap: 20px; /* Gap between columns */
-    padding: 20px;
+  column-count: 3; /* Number of columns */
+  column-gap: 20px; /* Gap between columns */
+  padding: 20px;
 }
 
 /* Individual tribute card */
 .tribute-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #D8EAE3;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure full width within grid */
-    max-width: 350px; /* Fixed width for all cards */
-    font-family: Arial, sans-serif;
-    margin-bottom: 20px; /* Space between cards */
-    height: auto; /* Ensure height adjusts based on content */
-    break-inside: avoid; /* Prevents cards from breaking in the middle */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #D8EAE3;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure full width within grid */
+  max-width: 350px; /* Fixed width for all cards */
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px; /* Space between cards */
+  height: auto; /* Ensure height adjusts based on content */
+  break-inside: avoid; /* Prevents cards from breaking in the middle */
 }
 
 /* Card header containing profile picture and name/relationship */
 .card-header {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .profile-photo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #0078D7;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: uppercase;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0078D7;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .card-header .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .details .name {
-    font-weight: bold;
-    font-size: 18px;
-    color: black;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
 }
 
 .details .relationship {
-    font-size: 14px;
-    color: rgb(243, 4, 4);
-    font-style: italic;
+  font-size: 14px;
+  color: rgb(243, 4, 4);
+  font-style: italic;
 }
 
 /* Card body containing tribute message */
 .card-body {
-    text-align: left;
-    font-size: 14px;
-    color: #333;
-    line-height: 1.5;
-    word-break: break-word;
-    white-space: pre-wrap; /* Allows for paragraph breaks */
-    margin-bottom: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  word-break: break-word;
+  white-space: pre-wrap; /* Allows for paragraph breaks */
+  margin-bottom: 10px;
 }
 
 /* Card footer containing timestamp and hashtag */
 .card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    font-size: 12px;
-    color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 12px;
+  color: #666;
 }
 
 .card-footer .hashtag {
-    color: #0078D7;
-    font-weight: bold;
+  color: #0078D7;
+  font-weight: bold;
 }
 
 .card-footer .timestamp {
-    font-style: italic;
-    color: #666;
+  font-style: italic;
+  color: #666;
 }
 
 /* Floating tab for tribute form */
 .floating-tab {
-    position: fixed;
-    color: rgb(255, 255, 255);
-    bottom: 50%;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #2E8BC0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(241, 2, 113, 0.281);
-    transition: transform 0.3s ease;
+  position: fixed;
+  color: rgb(255, 255, 255);
+  bottom: 50%;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #2E8BC0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(241, 2, 113, 0.281);
+  transition: transform 0.3s ease;
 }
 
 .floating-tab:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .floating-tab img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 /* Modal styling */
 .tribute-form-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .tribute-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tribute-form h2 {
-    font-size: 1.5rem;
-    color: #2E8BC0;
-    margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #2E8BC0;
+  margin-bottom: 15px;
 }
 
 .tribute-form input,
 .tribute-form textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .tribute-form button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
 }
 
 .tribute-form button#submit-tribute {
-    background-color: #2E8BC0;
-    color: white;
+  background-color: #2E8BC0;
+  color: white;
 }
 
 .tribute-form button#submit-tribute:hover {
-    background-color: #1A5A80;
+  background-color: #1A5A80;
 }
 
 .tribute-form button#close-modal {
-    background-color: #ccc;
-    color: #333;
+  background-color: #ccc;
+  color: #333;
 }
 
 .tribute-form button#close-modal:hover {
-    background-color: #999;
+  background-color: #999;
 }
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 1024px) {
-    .tributes-container {
-        column-count: 2; /* Two columns on medium screens */
-    }
+  .tributes-container {
+      column-count: 2; /* Two columns on medium screens */
+  }
 
-    .tribute-card {
-        padding: 20px;
-        max-width: 90%;
-    }
+  .tribute-card {
+      padding: 20px;
+      max-width: 90%;
+  }
 
-    .profile-photo {
-        width: 45px;
-        height: 45px;
-        font-size: 14px;
-    }
+  .profile-photo {
+      width: 45px;
+      height: 45px;
+      font-size: 14px;
+  }
 
-    .card-header .details .name {
-        font-size: 16px;
-    }
+  .card-header .details .name {
+      font-size: 16px;
+  }
 
-    .card-header .details .relationship {
-        font-size: 12px;
-    }
+  .card-header .details .relationship {
+      font-size: 12px;
+  }
 
-    .card-body {
-        font-size: 13px;
-    }
+  .card-body {
+      font-size: 13px;
+  }
 
-    .card-footer {
-        font-size: 10px;
-    }
+  .card-footer {
+      font-size: 10px;
+  }
 
-    .floating-tab {
-        width: 50px;
-        height: 50px;
-    }
+  .floating-tab {
+      width: 50px;
+      height: 50px;
+  }
 
-    .floating-tab img {
-        width: 25px;
-        height: 25px;
-    }
+  .floating-tab img {
+      width: 25px;
+      height: 25px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .tributes-container {
-        column-count: 1; /* One column on smaller screens */
-    }
+  .tributes-container {
+      column-count: 1; /* One column on smaller screens */
+  }
 
-    .tribute-card {
-        max-width: 100%;
-    }
+  .tribute-card {
+      max-width: 100%;
+  }
 
-    .profile-photo {
-        width: 40px;
-        height: 40px;
-        font-size: 14px;
-    }
+  .profile-photo {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+  }
 
-    .card-header .details .name {
-        font-size: 14px;
-    }
+  .card-header .details .name {
+      font-size: 14px;
+  }
 
-    .card-header .details .relationship {
-        font-size: 12px;
-    }
+  .card-header .details .relationship {
+      font-size: 12px;
+  }
 
-    .card-body {
-        font-size: 12px;
-    }
+  .card-body {
+      font-size: 12px;
+  }
 
-    .card-footer {
-        font-size: 10px;
-    }
+  .card-footer {
+      font-size: 10px;
+  }
 
-    .floating-tab {
-        width: 45px;
-        height: 45px;
-    }
+  .floating-tab {
+      width: 45px;
+      height: 45px;
+  }
 
-    .floating-tab img {
-        width: 20px;
-        height: 20px;
-    }
+  .floating-tab img {
+      width: 20px;
+      height: 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .tribute-form {
-        width: 85%;
-    }
+  .tribute-form {
+      width: 85%;
+  }
 
-    .tribute-form h2 {
-        font-size: 1.2rem;
-    }
+  .tribute-form h2 {
+      font-size: 1.2rem;
+  }
 
-    .tribute-form button {
-        font-size: 14px;
-    }
+  .tribute-form button {
+      font-size: 14px;
+  }
 
-    .tribute-card {
-        padding: 10px;
-        max-width: 100%;
-    }
+  .tribute-card {
+      padding: 10px;
+      max-width: 100%;
+  }
 
-    .profile-photo {
-        width: 35px;
-        height: 35px;
-        font-size: 12px;
-    }
+  .profile-photo {
+      width: 35px;
+      height: 35px;
+      font-size: 12px;
+  }
 
-    .card-header .details .name {
-        font-size: 12px;
-    }
+  .card-header .details .name {
+      font-size: 12px;
+  }
 
-    .card-header .details .relationship {
-        font-size: 10px;
-    }
+  .card-header .details .relationship {
+      font-size: 10px;
+  }
 
-    .card-body {
-        font-size: 11px;
-    }
+  .card-body {
+      font-size: 11px;
+  }
 
-    .card-footer {
-        font-size: 9px;
-    }
+  .card-footer {
+      font-size: 9px;
+  }
 }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+/* Header with initial transparent background */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease-out;
+}
+/* Logo and Navigation styles */
+.logo img {
+  max-height: 50px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+/* Navigation Link Style */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease-out;
+  margin-right: 4px;
+}
+
+/* Active State (Blue when clicked) */
+nav ul li a:active {
+  color: #2e8bc0;
+}
+
+.nav-links ul li a.active {
+  color: #20b2aa; /* Sea blue color for active link */
+  font-weight: bold;
+}
+/* Hover State */
+nav ul li a:hover {
+  color: #2e8bc0;
+  text-decoration: underline;
+}
+
 /* Hero Section */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 66.67vh; /* 2/3 of the viewport height */
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 66.67vh; /* 2/3 of the viewport height */
+  overflow: hidden;
 }
 
 .hero-banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.5s ease, filter 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 .hero:hover .hero-banner {
-    transform: scale(1.1); /* Zoom effect */
-    filter: brightness(50%); /* Darken the image */
+  transform: scale(1.1); /* Zoom effect */
+  filter: brightness(50%); /* Darken the image */
 }
 
 /* Overlay background */
 .hero-overlay-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .hero:hover .hero-overlay-bg {
-    opacity: 1; /* Display overlay when hovered */
+  opacity: 1; /* Display overlay when hovered */
 }
 
 /* Hero overlay text */
 .hero-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    font-weight: lighter;
-    color: white;
-    opacity: 0;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 1px 50px; /* Adjust padding to fit the text */
-    border: 1.5px solid white;
-    border-radius: 10px;
-    max-width: 100%; /* Ensure the width doesn't exceed the screen size */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Prevents text from overflowing if it gets too long */
-    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: white;
+  opacity: 0;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1px 250px;
+  border: 1.5px solid white;
+  border-radius: 10px;
+  white-space: nowrap;
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .hero:hover .hero-overlay {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1); /* Normal size */
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* Normal size */
 }
-
-/* Responsive Design */
-
 /* Medium Screens (max-width: 768px) */
 @media (max-width: 768px) {
-    .hero-overlay h1 {
-        font-size: 0.9rem;
-    }
+  .hero-overlay h1 {
+    font-size: 2rem;
+    white-space: wrap;
+  }
 
-    .hero-overlay{
-        padding: 1px 50px;
-        opacity: 1; /* Ensure overlay is visible */
-        transform: translate(-50%, -50%) scale(1); 
-    }
-    .hero-overlay-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
-        opacity: 2.5;
-        transition: opacity 0.3s ease-in-out;
-    }   
+  .hero-overlay {
+    padding: 1px 50px;
+    opacity: 1; /* Ensure overlay is visible */
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .photo-gallery {
+    padding: 70px;
+  }
+  .hero-overlay-bg {
+    opacity: 2.0;
+  }
 }
 
 /* Small Screens (max-width: 480px) */
 @media (max-width: 480px) {
-    .hero-overlay h1 {
-        font-size: 0.7rem;
-    }
-    .hero-overlay{
-        padding: 1px 25px;
-        opacity: 1; /* Ensure overlay is visible */
-        transform: translate(-50%, -50%) scale(1); 
-    }
-    .hero-overlay-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
-        opacity: 2.5;
-        transition: opacity 0.3s ease-in-out;
-    }
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+    white-space: wrap;
+  }
+  .hero-overlay {
+    padding: 1px 25px;
+    opacity: 1; /* Ensure overlay is visible */
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .photo-gallery {
+    padding: 50px;
+  }
+  .hero-overlay-bg {
+    opacity: 2;
+  }
 }
+
+/* Footer */
+footer {
+  background-color: #2e8bc0;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+/* Default (large screen) styles - hide the hamburger menu */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25px;
+  width: 30px;
+}
+
+/* Hamburger bars */
+.hamburger-menu .bar {
+  height: 4px;
+  width: 100%;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* For smaller screens (below 768px), show the hamburger menu and hide the nav links */
+@media (max-width: 768px) {
+  /* Position the hamburger menu to the right */
+  .hamburger-menu {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    top: 20px; /* Adjust based on your header height */
+    right: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+    margin-right: 30px;
+  }
+  /* Initially hide the nav links */
+  .nav-links {
+    display: none; /* Hide the nav links by default */
+    list-style: none;
+    padding: 0;
+  }
+
+  /* When the hamburger menu is active, show the nav links */
+  .nav-links.active {
+    display: flex;
+    flex-direction: column; /* Stack the nav items vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center align the items */
+    gap: 10px;
+    margin-right: 4px;
+    background-color: #333;
+    padding: 10px;
+    position: absolute;
+    top: 0; /* Adjust based on header height */
+    right: 0;
+    width: 100%;
+  }
+
+  /* Style the nav links */
+  .nav-links ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-links.active ul {
+    display: flex;
+    flex-direction: column; /* Stack the nav items vertically */
+    gap: 10px;
+    margin-right: 4px;
+    background-color: #333;
+    padding: 10px;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 0;
+    width: 100%;
+  }
+
+  .nav-links.active ul li {
+    display: block; /* Ensure each item takes up a full line */
+  }
+
+  .nav-links ul li a.active {
+    display: block;
+    /* Ensure each item takes up a full line */
+  }
+
+  .nav-links ul li {
+    margin: 0;
+    display: block; /* Ensure the list items are in a column layout */
+  }
+
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    display: block; /* Makes each link take up a full line */
+  }
+
+  .nav-links ul li a:hover {
+    background-color: #555;
+  }
+
+  /* Style the hamburger menu when active (close icon) */
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+}/* Default Styles */
 /* Moving text container */
 .moving-text-container {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-   
-    padding: 10px 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+ 
+  padding: 10px 0;
 }
 
 .moving-text {
-    display: inline-block;
-    animation: scrollText 30s linear infinite;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+  display: inline-block;
+  animation: scrollText 30s linear infinite;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }
 
 @keyframes scrollText {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
 }
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-    .moving-text {
-        font-size: 16px;
-    }
+  .moving-text {
+      font-size: 16px;
+  }
 
-    .moving-text-container {
-        padding: 8px 0;
-    }
+  .moving-text-container {
+      padding: 8px 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .moving-text {
-        font-size: 14px;
-    }
+  .moving-text {
+      font-size: 14px;
+  }
 
-    .moving-text-container {
-        padding: 5px 0;
-    }
+  .moving-text-container {
+      padding: 5px 0;
+  }
 }
