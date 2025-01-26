@@ -175,6 +175,15 @@
   box-sizing: border-box;
 }
 
+.tribute-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b80101;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+color: #2E8BC0;
+}
 .tribute-form button {
   padding: 10px 15px;
   border: none;
