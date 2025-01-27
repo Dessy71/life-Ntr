@@ -1,284 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Join us in honoring and celebrating a life well-lived. A heartfelt tribute to cherished memories, love, and legacy. Let’s remember, reflect, and cherish together.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://celebrationoflifefelixntrakwah.com/">
-    <meta property="og:title" content="Celebration Of Life - Felix Ntrakwah">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Join us in honoring and celebrating a life well-lived. A heartfelt tribute to cherished memories, love, and legacy. Let’s remember, reflect, and cherish together."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://celebrationoflifefelixntrakwah.com/" />
+    <meta property="og:title" content="Celebration Of Life - Felix Ntrakwah" />
     <title>Tributes - Felix Ntrakwah</title>
-    <link rel="shortcut icon" href="assets/img/index/pre.png" type="imagejpg">
-    <link rel="stylesheet" href="assets/css/tributes.css">
+    <link rel="shortcut icon" href="assets/img/index/pre.png" type="imagejpg" />
+    <link rel="stylesheet" href="assets/css/tributes.css" />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js" type="module"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js" type="module"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
-</head>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
 
-<body>
+    <script
+      src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"
+      type="module"
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"
+      type="module"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  </head>
+
+  <body>
     <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/img/index/logo.svg" alt="Logo">
-            </a>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/index/logo.svg" alt="Logo" />
+        </a>
+      </div>
+
+      <nav>
+        <div class="hamburger-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-        
-        <nav>
-            <div class="hamburger-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="photos.html" class="active">Photos</a></li>
-                    <li><a href="tributes.html" class="active">Tributes</a></li>                
-                    <li><a href="funeral.html" class="active">Funeral</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="photos.html" class="active">Photos</a></li>
+            <li><a href="tributes.html" class="active">Tributes</a></li>
+            <li><a href="funeral.html" class="active">Funeral</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-banner" style="background-image: url('assets/img/tributes/hero.JPEG');"></div>
-            <div class="hero-overlay-bg"></div>
-            <div class="hero-overlay">
-                <h1>Tributes to mr. Ntrakwah</h1>
-            </div>
-        </section>
-        <section class="tribute-section">
-
-            <div class="moving-text">Click on the floating message icon to add your tribute!</div>
-          
-
-            <!-- Tributes Display Container -->
-            <div class="tributes-container" id="tributes-container">
-                <!-- Tributes will be dynamically inserted here -->
-            </div>
-        </section>
-
-        <!-- Floating Tab for Writing a Tribute -->
-        <div class="floating-tab" id="floating-tab">
-            <i class="fa-solid fa-comments"></i>
-
+      <section class="hero">
+        <div
+          class="hero-banner"
+          style="background-image: url('assets/img/tributes/hero.JPEG')"
+        ></div>
+        <div class="hero-overlay-bg"></div>
+        <div class="hero-overlay">
+          <h1>Tributes to mr. Ntrakwah</h1>
+        </div>
+      </section>
+      <section class="tribute-section">
+        <div class="moving-text">
+          Click on the floating message icon to add your tribute!
         </div>
 
-        <!-- Tribute Form Modal -->
-        <div class="tribute-form-modal" style="display: none;">
-            <form class="tribute-form">
-                <h2>Write a Tribute</h2>
-
-                <!-- Name Input -->
-                <input type="text" id="name" placeholder="Your Name" required>
-
-                <!-- Relationship Dropdown -->
-                <select id="relationship" required>
-                    <option value="" disabled selected>Select your relationship</option>
-                    <option value="Family">Family</option>
-                    <option value="Friend">Friend</option>
-                    <option value="Colleague">Colleague</option>
-                    <option value="Student">Student</option>
-                    <option value="Other">Other</option>
-                </select>
-
-                <!-- Tribute Textarea -->
-                <textarea id="tribute-message" rows="5" placeholder="Your Tribute" required></textarea>
-
-                <!-- Buttons for Form -->
-                <button type="button" id="submit-tribute">Submit Tribute</button>
-                <button type="button" id="close-modal">Close</button>
-            </form>
+        <!-- Tributes Display Container -->
+        <div class="tributes-container" id="tributes-container">
+          <!-- Tributes will be dynamically inserted here -->
         </div>
+      </section>
 
+      <!-- Floating Tab for Writing a Tribute -->
+      <div class="floating-tab" id="floating-tab">
+        <i class="fa-solid fa-comments"></i>
+      </div>
+
+      <!-- Tribute Form Modal -->
+      <div class="tribute-form-modal" style="display: none">
+        <form class="tribute-form">
+          <h2>Write a Tribute</h2>
+
+          <!-- Name Input -->
+          <input type="text" id="name" placeholder="Your Name" required />
+
+          <!-- Relationship Dropdown -->
+          <select id="relationship" required>
+            <option value="" disabled selected>Select your relationship</option>
+            <option value="Family">Family</option>
+            <option value="Friend">Friend</option>
+            <option value="Colleague">Colleague</option>
+            <option value="Student">Student</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <!-- Tribute Textarea -->
+          <textarea
+            id="tribute-message"
+            rows="5"
+            placeholder="Your Tribute"
+            required
+          ></textarea>
+
+          <!-- Buttons for Form -->
+          <button type="button" id="submit-tribute">Submit Tribute</button>
+          <button type="button" id="close-modal">Close</button>
+        </form>
+      </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Celebration of Life - Felix Ntrakwah</p>
+      <p>&copy; 2025 Celebration of Life - Felix Ntrakwah</p>
     </footer>
 
     <!-- JavaScript Includes -->
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-        import { getDatabase, ref, get, child, set, push, onChildAdded } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+      import {
+        getDatabase,
+        ref,
+        get,
+        child,
+        set,
+        push,
+        onChildAdded,
+      } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyCaSnhrTO6MCHPYwns43lyZh-o_FGGDBGc",
-            authDomain: "gyidi-music-e8eac.firebaseapp.com",
-            databaseURL: "https://gyidi-music-e8eac-default-rtdb.firebaseio.com",
-            projectId: "gyidi-music-e8eac",
-            storageBucket: "gyidi-music-e8eac.firebasestorage.app",
-            messagingSenderId: "403453293978",
-            appId: "1:403453293978:web:cae8b1e2beb01f2495f623"
-        };
+      const firebaseConfig = {
+        apiKey: "AIzaSyCaSnhrTO6MCHPYwns43lyZh-o_FGGDBGc",
+        authDomain: "gyidi-music-e8eac.firebaseapp.com",
+        databaseURL: "https://gyidi-music-e8eac-default-rtdb.firebaseio.com",
+        projectId: "gyidi-music-e8eac",
+        storageBucket: "gyidi-music-e8eac.firebasestorage.app",
+        messagingSenderId: "403453293978",
+        appId: "1:403453293978:web:cae8b1e2beb01f2495f623",
+      };
 
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app);
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase(app);
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const floatingTab = document.getElementById('floating-tab');
-            const tributeFormModal = document.querySelector('.tribute-form-modal');
-            const closeModalButton = document.getElementById('close-modal');
-            const submitTributeButton = document.getElementById('submit-tribute');
+      document.addEventListener("DOMContentLoaded", function () {
+        const floatingTab = document.getElementById("floating-tab");
+        const tributeFormModal = document.querySelector(".tribute-form-modal");
+        const closeModalButton = document.getElementById("close-modal");
+        const submitTributeButton = document.getElementById("submit-tribute");
 
-            // Show modal on floating tab click
-            if (floatingTab) {
-                floatingTab.addEventListener('click', function () {
-                    tributeFormModal.style.display = 'flex';
-                });
+        // Show modal on floating tab click
+        if (floatingTab) {
+          floatingTab.addEventListener("click", function () {
+            tributeFormModal.style.display = "flex";
+          });
+        }
+
+        // Close modal on button click
+        if (closeModalButton) {
+          closeModalButton.addEventListener("click", function () {
+            tributeFormModal.style.display = "none";
+          });
+        }
+
+        // Submit tribute button click handler
+        if (submitTributeButton) {
+          submitTributeButton.addEventListener("click", function () {
+            const name = document.getElementById("name").value;
+            const relationship = document.getElementById("relationship").value;
+            const tributeMessage =
+              document.getElementById("tribute-message").value;
+
+            if (name && relationship && tributeMessage) {
+              const timestamp = Date.now();
+
+              const tribute = {
+                name: name,
+                relationship: relationship,
+                message: tributeMessage,
+                timestamp: timestamp,
+                profileColor: generateRandomColor(),
+              };
+
+              // Store tribute in Firebase Realtime Database
+              push(ref(db, "tributes"), tribute);
+
+              // Add tribute to local storage (for offline use)
+              const tributes =
+                JSON.parse(localStorage.getItem("tributes")) || [];
+              tributes.unshift(tribute);
+              localStorage.setItem("tributes", JSON.stringify(tributes));
+
+              // Display tribute immediately
+              addTributeToDisplay(tribute);
+
+              // Clear form fields
+              document.getElementById("name").value = "";
+              document.getElementById("relationship").value = "";
+              document.getElementById("tribute-message").value = "";
+
+              tributeFormModal.style.display = "none";
+            } else {
+              alert("Please fill in all fields.");
             }
+          });
+        }
 
-            // Close modal on button click
-            if (closeModalButton) {
-                closeModalButton.addEventListener('click', function () {
-                    tributeFormModal.style.display = 'none';
-                });
-            }
+        function addTributeToDisplay(tribute) {
+          const tributesContainer =
+            document.getElementById("tributes-container");
 
-            // Submit tribute button click handler
-            if (submitTributeButton) {
-                submitTributeButton.addEventListener('click', function () {
-                    const name = document.getElementById('name').value;
-                    const relationship = document.getElementById('relationship').value;
-                    const tributeMessage = document.getElementById('tribute-message').value;
+          // Check if this tribute has already been displayed
+          const existingTributes = Array.from(tributesContainer.children);
+          const duplicate = existingTributes.some((card) => {
+            return (
+              card.querySelector(".name").textContent === tribute.name &&
+              card.querySelector(".relationship").textContent ===
+                tribute.relationship &&
+              card.querySelector(".card-body").textContent === tribute.message
+            );
+          });
 
-                    if (name && relationship && tributeMessage) {
-                        const timestamp = Date.now();
+          if (duplicate) return;
 
-                        const tribute = {
-                            name: name,
-                            relationship: relationship,
-                            message: tributeMessage,
-                            timestamp: timestamp,
-                            profileColor: generateRandomColor()
-                        };
+          const tributeCard = document.createElement("div");
+          tributeCard.classList.add("tribute-card");
 
-                        // Store tribute in Firebase Realtime Database
-                        push(ref(db, 'tributes'), tribute);
+          const cardHeader = document.createElement("div");
+          cardHeader.classList.add("card-header");
 
-                        // Add tribute to local storage (for offline use)
-                        const tributes = JSON.parse(localStorage.getItem('tributes')) || [];
-                        tributes.unshift(tribute);
-                        localStorage.setItem('tributes', JSON.stringify(tributes));
+          const profilePic = document.createElement("div");
+          profilePic.classList.add("profile-photo");
+          profilePic.style.backgroundColor = tribute.profileColor;
 
-                        // Display tribute immediately
-                        addTributeToDisplay(tribute);
+          const initials = tribute.name
+            .split(" ")
+            .map((word) => word.charAt(0).toUpperCase())
+            .slice(0, 2) // Get only the first three initials
+            .join("");
+          profilePic.textContent = initials;
 
-                        // Clear form fields
-                        document.getElementById('name').value = '';
-                        document.getElementById('relationship').value = '';
-                        document.getElementById('tribute-message').value = '';
-
-                        tributeFormModal.style.display = 'none';
-                    } else {
-                        alert('Please fill in all fields.');
-                    }
-                });
-            }
-
-            function addTributeToDisplay(tribute) {
-                const tributesContainer = document.getElementById('tributes-container');
-
-                // Check if this tribute has already been displayed
-                const existingTributes = Array.from(tributesContainer.children);
-                const duplicate = existingTributes.some(card => {
-                    return card.querySelector('.name').textContent === tribute.name &&
-                        card.querySelector('.relationship').textContent === tribute.relationship &&
-                        card.querySelector('.card-body').textContent === tribute.message;
-                });
-
-                if (duplicate) return;
-
-                const tributeCard = document.createElement('div');
-                tributeCard.classList.add('tribute-card');
-
-                const cardHeader = document.createElement('div');
-                cardHeader.classList.add('card-header');
-
-                const profilePic = document.createElement('div');
-                profilePic.classList.add('profile-photo');
-                profilePic.style.backgroundColor = tribute.profileColor;
-
-             const initials = tribute.name
-                        .split(' ')
-                        .map(word => word.charAt(0).toUpperCase())
-                        .slice(0, 2) // Get only the first three initials
-                        .join('');
-                    profilePic.textContent = initials;
-
-                const details = document.createElement('div');
-                details.classList.add('details');
-                details.innerHTML = `
+          const details = document.createElement("div");
+          details.classList.add("details");
+          details.innerHTML = `
                     <div class="name">${tribute.name}</div>
                     <div class="relationship">${tribute.relationship}</div>
                 `;
 
-                cardHeader.appendChild(profilePic);
-                cardHeader.appendChild(details);
+          cardHeader.appendChild(profilePic);
+          cardHeader.appendChild(details);
 
-                const cardBody = document.createElement('div');
-                cardBody.classList.add('card-body');
-                cardBody.textContent = tribute.message;
+          const cardBody = document.createElement("div");
+          cardBody.classList.add("card-body");
+          cardBody.textContent = tribute.message;
 
-                const cardFooter = document.createElement('div');
-                cardFooter.classList.add('card-footer');
-                cardFooter.innerHTML = `
+          const cardFooter = document.createElement("div");
+          cardFooter.classList.add("card-footer");
+          cardFooter.innerHTML = `
                     <div class="hashtag">#Celebration_Of_Life</div>
-                    <div class="timestamp">${formatRelativeTime(tribute.timestamp)}</div>
+                    <div class="timestamp">${formatRelativeTime(
+                      tribute.timestamp
+                    )}</div>
                 `;
 
-                tributeCard.appendChild(cardHeader);
-                tributeCard.appendChild(cardBody);
-                tributeCard.appendChild(cardFooter);
+          tributeCard.appendChild(cardHeader);
+          tributeCard.appendChild(cardBody);
+          tributeCard.appendChild(cardFooter);
 
-                tributesContainer.insertBefore(tributeCard, tributesContainer.firstChild);
-            }
+          tributesContainer.insertBefore(
+            tributeCard,
+            tributesContainer.firstChild
+          );
+        }
 
-            function generateRandomColor() {
-                const letters = '0123456789ABCDEF';
-                let color = '#';
-                for (let i = 0; i < 6; i++) {
-                    color += letters[Math.floor(Math.random() * 16)];
-                }
-                return color;
-            }
+        function generateRandomColor() {
+          const letters = "0123456789ABCDEF";
+          let color = "#";
+          for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
 
-            function formatRelativeTime(timestamp) {
-                const now = Date.now();
-                const diff = Math.floor((now - timestamp) / 1000);
+        function formatRelativeTime(timestamp) {
+          const now = Date.now();
+          const diff = Math.floor((now - timestamp) / 1000);
 
-                if (diff < 60) return `${diff}s ago`;
-                if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
-                if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
-                return `${Math.floor(diff / 86400)}d ago`;
-            }
+          if (diff < 60) return `${diff}s ago`;
+          if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+          if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+          return `${Math.floor(diff / 86400)}d ago`;
+        }
 
-            // Load stored tributes from localStorage and display them
-            //const storedTributes = JSON.parse(localStorage.getItem('tributes')) || [];
-          //  storedTributes.forEach(addTributeToDisplay);
+        // Load stored tributes from localStorage and display them
+        //const storedTributes = JSON.parse(localStorage.getItem('tributes')) || [];
+        //  storedTributes.forEach(addTributeToDisplay);
 
-            // Sync tributes in real-time from Firebase
-            onChildAdded(ref(db, 'tributes'), function(snapshot) {
-                const tribute = snapshot.val();
-                addTributeToDisplay(tribute);
-            });
+        // Sync tributes in real-time from Firebase
+        onChildAdded(ref(db, "tributes"), function (snapshot) {
+          const tribute = snapshot.val();
+          addTributeToDisplay(tribute);
         });
+      });
     </script>
     <script src="assets/js/tributes.js"></script>
     <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-      </script>
-      <script defer src="/_vercel/insights/script.js"></script>
-</body>
-
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
 </html>
