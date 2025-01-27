@@ -209,11 +209,12 @@
                 profilePic.classList.add('profile-photo');
                 profilePic.style.backgroundColor = tribute.profileColor;
 
-                const initials = tribute.name
-                    .split(' ')
-                    .map(word => word.charAt(0).toUpperCase())
-                    .join('');
-                profilePic.textContent = initials;
+             const initials = tribute.name
+                        .split(' ')
+                        .map(word => word.charAt(0).toUpperCase())
+                        .slice(0, 2) // Get only the first three initials
+                        .join('');
+                    profilePic.textContent = initials;
 
                 const details = document.createElement('div');
                 details.classList.add('details');

@@ -40,9 +40,7 @@
         heroImage.style.opacity = 1 - opacity;
 
         // Optionally apply a gradient overlay
-        if (heroContainer) {
-            heroContainer.style.background = `linear-gradient(rgba(0, 0, 0, ${opacity}), rgba(0, 0, 0, 0.5)), url('images/hero.jpg') no-repeat center center/cover`;
-        }
+      
     });
 
     // Change header background color on scroll
