@@ -40,3 +40,23 @@ navLinks.forEach((link) => {
     }
   });
 });
+
+// limt row for name
+const nameInput = document.getElementById('name');
+const displayName = document.getElementById('display-name');
+
+nameInput.addEventListener('input', () => {
+  const inputText = nameInput.value.trim();
+  
+  // Set name text in display
+  displayName.textContent = inputText;
+
+  // Adjust font size based on input length
+  if (inputText.length > 30) {
+    displayName.style.fontSize = '14px';
+  } else if (inputText.length > 20) {
+    displayName.style.fontSize = '16px';
+  } else {
+    displayName.style.fontSize = '18px';
+  }
+});

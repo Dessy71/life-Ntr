@@ -39,15 +39,16 @@
 .card-header {
   display: flex;
   align-items: center;
+  text-align: left;
   width: 100%;
   gap: 10px;
   margin-bottom: 10px;
 }
 
 .profile-photo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 50px; /* Ensures a fixed width */
+  height: 50px; /* Ensures a fixed height */
+  border-radius: 50%; /* Ensures the element is circular */
   background-color: #0078D7;
   color: white;
   display: flex;
@@ -56,7 +57,13 @@
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
+  overflow: hidden; /* Ensures content stays within the circle */
+  white-space: nowrap; /* Prevents text from wrapping */
+  text-overflow: ellipsis; /* Adds ellipsis if text overflows */
+  box-sizing: border-box; /* Includes padding and border in width/height */
 }
+
+
 
 .card-header .details {
   display: flex;
@@ -69,6 +76,11 @@
   font-weight: bold;
   font-size: 18px;
   color: black;
+  text-align: left;
+  word-break: break-word;
+  line-height: 1.2; /* Control spacing between lines */
+  max-height: 2.4em; /* Limit to two lines based on line-height */
+  overflow: hidden; /* Hide extra text */
 }
 
 .details .relationship {
