@@ -166,12 +166,13 @@
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  width: 300px;
+  width: 600px;
+  max-width: 85%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tribute-form h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #2E8BC0;
   margin-bottom: 15px;
 }
@@ -180,29 +181,31 @@
 .tribute-form textarea {
   width: 100%;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   box-sizing: border-box;
 }
 
 .tribute-form select {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #b80101;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   box-sizing: border-box;
 color: #2E8BC0;
+
 }
 .tribute-form button {
-  padding: 10px 15px;
+  padding: 12px 18px;
   border: none;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   margin: 5px;
+  font-size: 1.2rem;
 }
 
 .tribute-form button#submit-tribute {
