@@ -60,3 +60,6 @@ nameInput.addEventListener('input', () => {
     displayName.style.fontSize = '18px';
   }
 });
+window.addEventListener('resize', function() {
+  document.body.style.zoom = 1;
+});
