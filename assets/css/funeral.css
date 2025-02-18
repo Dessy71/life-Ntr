@@ -342,7 +342,7 @@ footer {
   /* For small devices (phones, less than 576px) */
   @media (max-width: 575.98px) {
     .funeral-section {
-      max-width: 90%; /* Reduce width for smaller screens */
+      max-width: 80%; /* Reduce width for smaller screens */
       margin: 50px auto; /* Adjust vertical margin */
       padding: 1rem; /* Reduce padding */
     }
@@ -387,7 +387,7 @@ footer {
   /* For large devices (desktops, 769px and up) */
   @media (min-width: 768px) {
     .funeral-section {
-      max-width: 600px; /* Full width for large screens */
+      max-width: 650px; /* Full width for large screens */
       padding: 1.5rem; /* Spacious padding */
     }
   
