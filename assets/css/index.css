@@ -182,80 +182,7 @@ nav ul li a:hover {
   }
 }
 
-/* Articles Section */
-.articles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 0 auto;
-  background-color: #f8f8ff;
-  padding: 2rem 0;
-}
 
-/* Article Style */
-.articles article {
-  max-width: 400px;
-  width: 100%;
-  height: 70%;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.4s ease-in-out;
-  overflow: hidden;
-  border-radius: 1rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-/* Image Style */
-.articles article img {
-  height: 40vh;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 1rem 1rem 0 0;
-}
-
-/* Article Preview Section */
-.article-preview {
-  padding: 1.5rem;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 40%;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-/* Article Title */
-.articles article h2 {
-  margin: 0 0 0.25rem 0;
-  font-size: 1.6rem;
-  color: var(--text);
-  transition: color 0.3s ease-out;
-}
-
-/* Article Paragraph */
-.articles article p {
-  margin: 0;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: var(--text);
-}
-
-/* Hover Effect for Entire Article */
-.articles article:hover {
-  transform: scale(1.05);
-}
-
-/* Hover Effect for Image */
-.articles article:hover img {
-  transform: scale(1.05);
-}
 
 /* Footer */
 footer {
@@ -394,3 +321,81 @@ footer {
     font-size: 1.5rem; /* Adjusted for small screens */
   }
 }
+/* Articles Section */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  gap: 1.5rem;
+  margin: 0 auto;
+  background-color: #f8f8ff;
+  padding: 2rem 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .articles {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .articles {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+
+/* Article Style */
+.articles article {
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* Image Style */
+.articles article img {
+  height: 40vh;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Article Preview Section */
+.article-preview {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Article Title */
+.articles article h2 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.6rem;
+  color: var(--text);
+  transition: color 0.3s ease-out;
+}
+
+/* Article Paragraph */
+.articles article p {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* Hover Effects */
+.articles article:hover {
+  transform: translateY(-5px);
+}
+
+.articles article:hover img {
+  transform: scale(1.05);
+  transition: transform 0.4s ease-in-out;
+}
+
